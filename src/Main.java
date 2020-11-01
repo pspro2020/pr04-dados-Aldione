@@ -27,7 +27,7 @@ public class Main {
                 "Number 4: %s times\n" +
                 "Number 5: %s times\n" +
                 "Number 6: %s times\n" +
-                "Total times: %1$s + %2$s + %3$s + %4$s + %5$s + %6$s = %s\n", dice.getNumber1(), dice.getNumber2(), dice.getNumber3(), dice.getNumber4(), dice.getNumber5(), dice.getNumber6(), sumDiceThreads(dice));
+                "Total times: %1$s + %2$s + %3$s + %4$s + %5$s + %6$s = %s\n", dice.getNumber(1), dice.getNumber(2), dice.getNumber(3), dice.getNumber(4), dice.getNumber(5), dice.getNumber(6), sumDiceThreads(dice));
 
     }
 
@@ -53,7 +53,7 @@ public class Main {
 
     private static int sumDiceThreads(Dice dice) {
 
-        int total = dice.getNumber1() + dice.getNumber2() + dice.getNumber3() + dice.getNumber4() + dice.getNumber5() + dice.getNumber6();
+        int total = dice.getNumber(1) + dice.getNumber(2) +dice.getNumber(3) +dice.getNumber(4) +dice.getNumber(5) +dice.getNumber(6);
         return total;
 
     }

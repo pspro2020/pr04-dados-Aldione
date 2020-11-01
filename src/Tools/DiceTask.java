@@ -1,5 +1,7 @@
 package Tools;
 
+import java.util.Random;
+
 public class DiceTask implements Runnable {
 
 
@@ -13,9 +15,12 @@ public class DiceTask implements Runnable {
 
     @Override
     public void run(){
+        Random rnd;
+
+        rnd = new Random();
 
         for (int i=0; i < 10000; i++){
-            dice.useDice();
+            dice.useDice(rnd.nextInt(6)+1);
         }
 
     }
